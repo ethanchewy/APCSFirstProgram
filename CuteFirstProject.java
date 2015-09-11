@@ -25,7 +25,7 @@ public class CuteFirstProject {
     world.setPicture(f);
     
     //Creates new Turtle 
-    Turtle turtle = new Turtle(250,250,world);
+    Turtle turtle = new Turtle(200,250,world);
     
     //Sets Turtle's color
     turtle.setColor(new Color(255, 0, 255));
@@ -41,7 +41,7 @@ public class CuteFirstProject {
     d = d.scale(.3,.3);
     
     //Drop the picture to location
-    turtledog.Penup();
+    //turtledog.penUp();
     turtledog.backward(100);
     turtledog.drop(d);
     
@@ -88,7 +88,17 @@ public class CuteFirstProject {
     
     //Scale image to . 5 of original
     p=p.scale(.5,.5);
-
+    
+    //Get image
+    Picture bearbunny = 
+      new Picture(FileChooser.getMediaPath("bearbunny.jpg"));
+    bearbunny = bearbunny.scale(.8,.8);
+    //Make and Drop Bunny and Bear
+    Turtle indigo = new Turtle(500,350,world);
+    indigo.forward(100);
+    indigo.drop(bearbunny);
+    
+    
     //For loop to make multiple images in various directions
     for (int i = 0; i < 360; i=i+45)
     {
