@@ -1,0 +1,63 @@
+public class SongofLove {
+    public void printSong() {
+      intro();
+      verse1();
+      //verse2();
+      //verse3();
+      //verse4();
+      //verse5();
+      //verse6();
+      //verse7();
+      //conclusion();
+    }
+    
+    public void intro() {
+      System.out.println("I like you, Fred, I like you!");
+      System.out.println("You're just saying those words to be kind.");
+      System.out.println("No, I mean it.  I like... I mean I love you, Fred!");
+      System.out.println("He is out of his medieval mind!");
+      System.out.println("I'm perfectly sane and sound!  I never felt better in my life!");
+      System.out.println("Everybody... everybody, everybody!  Come on!  And meet my incipient wife!");
+      System.out.println();
+    }
+    
+    public void love() {
+      System.out.println("I'm in love with a girl named Fred.");
+    }
+    
+    public void verse1() {
+      love();
+      System.out.println("My reasons must be clear.");
+      System.out.println("When she shows you all how strong she is you'll stand right up and cheer!");
+      with();
+      System.out.println();
+      
+    }
+    
+    public void verse2() {
+      System.out.println("She drinks just like a lord!");
+      System.out.println("So sing a merry drinking song and let the wine be poured!");
+      with();
+      System.out.println();
+      
+    }
+    
+    public void with() {
+      System.out.println("With a \"F\" and a \"R\" and an \"E\" and a \"D\"");
+      System.out.println("And a \"F-R-E-D\" Fred !Yeah !");
+    }
+    
+    public void laudandpraise() {
+      System.out.println("La la la la, la la la la, la la la la la!");
+      System.out.println("Fill the bowl to overflowing.  Raise the goblet high!");
+    }
+    
+    public void clap() {
+      System.out.println("clap clap, clap clap, clap clap clap clap, clap, clap clap!");
+    }
+    
+    public void bravo() {
+      System.out.println("Bravo!  Bravo!  Bravissimo bravo!  Bravissimo!");
+    }
+ }
+

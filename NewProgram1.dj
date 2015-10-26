@@ -1,0 +1,11 @@
+/**
+ * Auto Generated Java Language Level Class.
+ */
+import java.util.Scanner;
+class NewProgram1 {
+  
+  /* ADD YOUR CODE HERE */
+  public static void main(String[] args) {
+  }
+  
+}

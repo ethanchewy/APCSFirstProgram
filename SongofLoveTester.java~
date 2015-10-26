@@ -1,0 +1,9 @@
+/**
+ * Auto Generated Java Language Level Class.
+ */
+public class SongOfLoveTester {
+    public static void main(String[] args) {
+        SongOfLove song=new SongOfLove();
+        song.printSong();
+    }
+}

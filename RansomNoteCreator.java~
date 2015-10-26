@@ -1,0 +1,70 @@
+/**
+ * Auto Generated Java Language Level Class.
+ */
+import java.lang.*;
+public class RansomNoteCreator {
+  
+  private World w;
+  private Turtle t;
+  
+  /*
+   * Constructor.  Should build the world and Turtle. 
+   * The turtle should begin at (50, 50) facing right.
+   */
+  public RansomNoteCreator( int width, int height ) {
+    FileChooser.setMediaPath("media/"); 
+    w = new World(width, height);
+    t= new Turtle(w);
+    t.penUp();
+    t.moveTo(50, 50);
+  }
+  
+  public void createNote( String text ) {
+    text=text.toUpperCase();
+    for( int i=0; i< text.length(); i++) {
+      char ch=text.charAt(i);
+      drawLetter(ch);
+      //reset position of turtle.
+      //t.turn(0);
+      }
+    }
+  
+  public void drawLetter(char ch) {
+    // get random double number
+    double x = Math.random();
+    
+    
+    if (ch>='A' && ch <= 'Z'){
+      Picture a = new Picture(ch + ".jpg");
+      a=a.scale(.4,.4);
+      t.penUp();
+      t.turn(-90);
+      t.drop(a);
+      t.turn(90);
+      t.forward(a.getWidth());
+      t.forward(50);
+      t.turn(x);
+    } else if (ch == ' ') {
+      t.forward(100);
+    } else {
+      System.out.println("Oh No! You did not press a letter! Its has been replaced by a space.");
+      t.forward(50);
+    }
+   /* 
+    
+    a=a.scale(.4,.4);
+    t.penUp();
+    t.turn(-90);
+    t.drop(a);
+    t.turn(90);
+    t.forward(a.getWidth()); // to pass the white fill
+    
+   */
+  }
+  
+  public void drawSpace() {
+    t.penUp();
+    t.forward(100);
+  }
+  
+}
