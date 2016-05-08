@@ -1,0 +1,73 @@
+/* Ethan Chiu */
+public class Opoly{
+  private int boardSize, round, position, score;
+  private String piece="o";
+
+  public Opoly(int i){
+    boardSize = i;
+  }
+  public void playGame(){
+
+    while (isGameOver()!=true){
+      drawBoard();
+    }
+    System.out.println("game over");
+    displayReport();
+  }
+  
+  public int spin(){
+    int i = (int)(Math.random()*5+1);
+    return i;
+  }
+  
+  public void move(int i){
+    position += i;
+  }
+  
+  public void spinAndMove(){
+    int i = spin();
+    move(i);
+    if (position >= boardSize -1){
+      position -= boardSize - 1;
+    }
+    if (position%7==0){
+      if (score<100){
+        score += 100;
+      }
+      else{
+        score *=2;
+      }
+    } 
+    if (position == boardSize-1){
+      move(-3);
+    } 
+    if(position >= boardSize){
+      score += 100;
+    }
+    if(round%10==0){
+      score -= 50;
+    }
+  }
+  
+  public boolean isGameOver(){
+    return(score>=1000);
+  }
+  public void drawBoard(){
+    String tobePrinted ="";
+    spinAndMove();
+      for (int i = 0; i <boardSize;i++){
+        if (i == position){
+          tobePrinted+=piece;
+        } else{
+          tobePrinted += "*";
+        }
+      }
+      System.out.print(tobePrinted+" ");
+      System.out.println(score);
+      round++;
+    }
+  public void displayReport(){
+     System.out.println("Number of rounds: " + round);
+     System.out.println("Reward: " + score);
+  }
+}

@@ -1,0 +1,13 @@
+/**
+ * Auto Generated Java Language Level Class.
+ */
+class Tesfdfg {
+  
+  /* ADD YOUR CODE HERE */
+  public static void main (String[] args){
+    public boolean beginsWithB(String s){
+      return(s.indexOf(0,0));
+    }
+  }
+  
+}
